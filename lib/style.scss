@@ -1,15 +1,36 @@
-$wtf: #ff0080;
-$ridiculous: cursive;
+$midnight-blue: #2c3e50;
+$peter-river: #3498db;
+$alizarin: #e74c3c;
+$emerald: #2ecc71;
+$silver: #bdc3c7;
+$asbestos: #7f8c8d;
+
+$fira-sans: 'Fira Sans', sans-serif;
 
 body {
-  background: $wtf;
+  background: $peter-river;
 }
 
 .hello-world {
-  font-family: $ridiculous;
+  font-family: $fira-sans;
 }
 
 #new-message--content {
   height: 100px;
   border: 1px dotted aliceblue;
+}
+
+.header {
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  flex-direction: row;
+  background: $midnight-blue;
+  color: white;
+}
+
+.search-box {
+  width: 20%;
+  font-size: 1.5em;
+  background-color: $silver;
 }
