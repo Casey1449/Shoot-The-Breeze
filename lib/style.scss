@@ -42,6 +42,7 @@ body {
   background-color: $peter-river;
   color: white;
   font-size: 1em;
+  font-family: $fira-sans;
   width: 85px;
   height: 35px;
   margin-right: 15px;
@@ -61,4 +62,22 @@ body {
 
 .search-box::-webkit-input-placeholder {
   color: $midnight-blue;
+}
+
+.main-wrapper {
+  display: flex;
+  height: 80vh;
+  flex-direction: row;
+}
+
+.message-list-container {
+  padding: 20px;
+  width: 70%;
+  background-color: white;
+}
+
+.user-list-container {
+  padding: 20px;
+  width: 30%;
+  background-color: $silver;
 }
