@@ -9,6 +9,7 @@ $fira-sans: 'Fira Sans', sans-serif;
 
 body {
   background: $peter-river;
+  font-family: $fira-sans;
 }
 
 .hello-world {
@@ -22,15 +23,42 @@ body {
 
 .header {
   display: flex;
-  height: 10vh;
+  height: 8vh;
+  width: 100%;
   align-items: center;
   flex-direction: row;
   background: $midnight-blue;
   color: white;
 }
 
+.header h1 {
+  margin: 15px;
+  min-width: 125px;
+}
+
+.sort-button {
+  border: none;
+  border-radius: 5px;
+  background-color: $peter-river;
+  color: white;
+  font-size: 1em;
+  width: 85px;
+  height: 35px;
+  margin-right: 15px;
+}
+
 .search-box {
-  width: 20%;
-  font-size: 1.5em;
+  width: 35%;
+  height: 4.5vh;
+  font-size: 1em;
+  padding-left: 15px;
   background-color: $silver;
+  border: none;
+  border-radius: 5px;
+  font-family: $fira-sans;
+  margin-right: 30%;
+}
+
+.search-box::-webkit-input-placeholder {
+  color: $midnight-blue;
 }
