@@ -4,21 +4,13 @@ $alizarin: #e74c3c;
 $emerald: #2ecc71;
 $silver: #bdc3c7;
 $asbestos: #7f8c8d;
+$amethyst: #9b59b6;
 
 $fira-sans: 'Fira Sans', sans-serif;
 
 body {
-  background: $peter-river;
+  background: $midnight-blue;
   font-family: $fira-sans;
-}
-
-.hello-world {
-  font-family: $fira-sans;
-}
-
-#new-message--content {
-  height: 100px;
-  border: 1px dotted aliceblue;
 }
 
 .header {
@@ -81,4 +73,81 @@ body {
   padding: 20px;
   width: 30%;
   background-color: $silver;
+}
+
+.arrows {
+  margin-left: 10px;
+}
+
+.user-list-title {
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.login-status {
+  display: flex;
+  align-items: center;
+  color: white;
+  height: 5vh;
+  background-color: $asbestos;
+}
+
+.user-message {
+  width: 60%;
+  height: 4vh;
+  font-size: 1em;
+  padding-left: 15px;
+  background-color: $silver;
+  border: none;
+  border-radius: 5px;
+  font-family: $fira-sans;
+  margin-right: 5%;
+  min-width: 220px;
+}
+
+.user-message::-webkit-input-placeholder {
+  color: $midnight-blue;
+}
+
+.send-messages {
+  display: flex;
+  height: 7vh;
+  align-items: center;
+}
+
+.submit-button {
+  background-color: $emerald;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.clear-button {
+  background-color: $alizarin;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.character-counter {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.time-stamp {
+  color: $amethyst;
+}
+
+.message-body {
+  color: $midnight-blue;
+}
+
+.sender {
+  color: $peter-river;
 }
