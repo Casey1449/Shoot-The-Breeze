@@ -20,9 +20,9 @@ describe('Application', () => {
 
   it('should allow us to set a user', ()=>{
     const wrapper = mount(<Application />);
-    expect(wrapper.state.user).to.equal(null);
+    expect(wrapper.state.user).to.equal(undefined);
     wrapper.state().user = 'Bobby';
-    expect(wrapper.state.user).to.equal('Bobby');
+    expect(wrapper.state().user).to.equal('Bobby');
   });
 
 });
