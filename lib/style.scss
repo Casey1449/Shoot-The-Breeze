@@ -115,6 +115,10 @@ body {
   align-items: center;
 }
 
+button:disabled {
+  opacity: .6;
+}
+
 .submit-button {
   background-color: $emerald;
   border: none;
