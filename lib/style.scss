@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 $fira-sans: 'Fira Sans', sans-serif;
 
@@ -38,7 +39,7 @@ body {
   width: 35%;
   height: 4.5vh;
   font-size: 1em;
-  padding-left: 15px;
+  padding-left: 10px;
   background-color: $silver;
   border: none;
   border-radius: 5px;
@@ -94,8 +95,8 @@ body {
 .user-message {
   width: 65%;
   height: 4vh;
+  padding-left: 10px;
   font-size: 1em;
-  // padding-left: 10px;
   background-color: $silver;
   border: none;
   border-radius: 5px;
@@ -131,6 +132,7 @@ button:disabled {
   font-size: 20px;
   margin-right: 10px;
   padding: 10px;
+  font-family: $fira-sans;
 }
 
 .clear-button {
@@ -140,6 +142,7 @@ button:disabled {
   color: white;
   font-size: 20px;
   padding: 10px;
+  font-family: $fira-sans;
 }
 
 .character-counter {
@@ -164,19 +167,69 @@ button:disabled {
   color: $peter-river;
 }
 
-// @media screen and (min-width: 320px) {
-//   .header {
-//     display: flex;
-//     height: 10vh;
-//     flex-direction: column;
-//     justify-content: center;
-//     background-color: red;
-//   }
-//   .sort-button {
-//     flex-direction: row;
-//   }
-//   .search-box {
-//     padding-left: 0;
-//     margin-right: 0;
-//   }
-// }
+@media screen and (max-width: 420px) {
+  .header {
+    display: flex;
+    height: 20vh;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .send-messages {
+    display: flex;
+    flex-wrap: wrap;
+    height: 23vh;
+    justify-content: center;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    background-color: $midnight-blue
+  }
+
+  .search-box {
+    margin: auto;
+    height: 40px;
+    width: 85%;
+    font-size: 24px;
+  }
+
+  .sort-button {
+   @include phone-buttons;
+  }
+
+  .submit-button {
+   @include phone-buttons;
+  }
+
+  .clear-button {
+   @include phone-buttons;
+  }
+
+  .header h1 {
+   display: none;
+  }
+
+  .user-list-container {
+    display: none;
+  }
+
+  .login-status {
+    display: none;
+  }
+
+  .message-list-container {
+    width: 100%;
+  }
+
+  .user-message {
+    height: 40px;
+    font-size: 24px;
+    margin-right: 15px;
+  }
+}
