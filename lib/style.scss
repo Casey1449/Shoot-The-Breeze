@@ -92,16 +92,21 @@ body {
 }
 
 .user-message {
-  width: 60%;
+  width: 65%;
   height: 4vh;
   font-size: 1em;
-  padding-left: 15px;
+  // padding-left: 10px;
   background-color: $silver;
   border: none;
   border-radius: 5px;
   font-family: $fira-sans;
-  margin-right: 5%;
+  margin-right: 30px;
+  margin-left: 15px;
   min-width: 220px;
+}
+
+.login-bar {
+  margin-left: 15px;
 }
 
 .user-message::-webkit-input-placeholder {
@@ -151,6 +156,27 @@ button:disabled {
   color: $midnight-blue;
 }
 
+.message {
+  margin-bottom: 15px;
+}
+
 .sender {
   color: $peter-river;
 }
+
+// @media screen and (min-width: 320px) {
+//   .header {
+//     display: flex;
+//     height: 10vh;
+//     flex-direction: column;
+//     justify-content: center;
+//     background-color: red;
+//   }
+//   .sort-button {
+//     flex-direction: row;
+//   }
+//   .search-box {
+//     padding-left: 0;
+//     margin-right: 0;
+//   }
+// }
