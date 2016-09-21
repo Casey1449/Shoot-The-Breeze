@@ -1,10 +1,15 @@
 import React from 'react';
 // let _ = require('lodash');
 
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount, render, simulate } from 'enzyme';
 import { assert, expect } from 'chai';
 
 import Application from '../lib/components/Application';
+import MessageList from '../lib/components/Message-list';
+import mockMessages from './helpers/messages';
+import fakeUser from './helpers/fake-user';
+import InputForm from '../lib/components/Input-form';
+
 
 describe('Application', () => {
 
@@ -25,24 +30,50 @@ describe('Application', () => {
     expect(wrapper.state().user).to.equal('Bobby');
   });
 
-});
+  it('should have 2 input fields', ()=>{
+    const wrapper = shallow(<Application user={fakeUser}/>);
+    expect(wrapper.render().find('input')).to.have.length(2);
+  });
 
-// it('should have the button text rendered onto the page', function(){
-//   const wrapper = render(<App/>)
-//   expect(wrapper.text()).to.contain('Likes: 0Like! (+1)Dislike! (-1)')
-// })
-// })
-//
-// describe('likes counter',function(){
-// it('should have 2 action button props', function(){
-//   const wrapper = render(<LikesCounter/>)
-//   expect(wrapper.find('.ActionButton')).to.have.length(2)
-// })
-//
-// it('should allow me to click the action button', function(){
-//   const wrapper = mount(<LikesCounter/>)
-//   wrapper.state().count = 0 // we must do this because this value isn't set initially
-//   var button = wrapper.find('#like').simulate('click')
-//
-//   expect(wrapper.state().count).to.equal(1)
-// })
+  it('should have 3 buttons when there is no user', ()=>{
+    const wrapper = shallow(<Application />);
+    expect(wrapper.render().find('button')).to.have.length(3);
+  });
+
+  it('should have 4 buttons when there is a user', ()=>{
+    const wrapper = shallow(<Application user={fakeUser}/>);
+    wrapper.state().user = fakeUser;
+    wrapper.update();
+    expect(wrapper.render().find('button')).to.have.length(4);
+  });
+
+  it('should have a user when passed a damn user', ()=>{
+    const wrapper = shallow(<Application user={fakeUser}/>);
+    wrapper.state().user = fakeUser;
+    expect(wrapper.state().user).to.equal(fakeUser);
+  });
+
+  it('should have an Input Form', ()=>{
+    const wrapper = shallow(<Application user={fakeUser}/>);
+    expect(wrapper.find('footer').render().find(InputForm)).to.exist;
+  });
+
+  it('should have a submit-button', ()=>{
+    const wrapper = shallow(<Application user={fakeUser}/>);
+    expect(wrapper.find('footer').render().find(InputForm).children().find('.submit-button')).to.exist;
+  });
+
+  it('should have an input form in the footer', ()=>{
+    const wrapper = shallow(<Application user={fakeUser}/>);
+    expect(wrapper.find('footer').render().find('input')).to.exist;
+  });
+
+  it('change the value of the draft-messages state on change of input field', ()=>{
+    const wrapper = mount(<Application />);
+    const Input = wrapper.find('footer').render().find('input');
+    Input.simulate('change', {target: {value: 'My new value'}});
+    expect(wrapper.state().draftMessage).to.equal('My new value');
+  });
+
+
+});
