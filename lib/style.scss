@@ -65,6 +65,23 @@ body {
   overflow-y: scroll;
 }
 
+.login-button {
+  height: 40px;
+  width: 100px;
+  background-color: $emerald;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: $fira-sans;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.login-wrapper {
+  width: 100%;
+  background-color: $asbestos;
+}
+
 .user-list-container {
   padding: 20px;
   width: 30%;
@@ -189,7 +206,8 @@ button:disabled {
     position: absolute;
     bottom: 0;
     padding: 5px;
-    background-color: $midnight-blue
+    background-color: $midnight-blue;
+    width: 100%;
   }
 
   .search-box {
