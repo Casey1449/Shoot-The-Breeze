@@ -90,6 +90,9 @@ body {
 
 .user-list-user {
   margin: 5px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .arrows {
