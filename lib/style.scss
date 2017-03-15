@@ -174,10 +174,12 @@ button:disabled {
 }
 
 .time-stamp {
+  float: right;
   color: $amethyst;
 }
 
 .message-body {
+  padding-top: 7px;
   color: $midnight-blue;
 }
 
