@@ -54,7 +54,7 @@ body {
 
 .main-wrapper {
   display: flex;
-  height: 80vh;
+  height: 72vh;
   flex-direction: row;
 }
 
@@ -114,15 +114,15 @@ body {
 
 .user-message {
   width: 65%;
-  height: 4vh;
-  padding-left: 10px;
+  height: 44px;
+  padding-left: 15px;
   font-size: 1em;
   background-color: $silver;
   border: none;
   border-radius: 5px;
   font-family: $fira-sans;
-  margin-right: 30px;
-  margin-left: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
   min-width: 220px;
 }
 
@@ -136,7 +136,8 @@ body {
 
 .send-messages {
   display: flex;
-  height: 7vh;
+  margin-top: 15px;
+  height: 10vh;
   align-items: center;
 }
 
@@ -183,7 +184,7 @@ button:disabled {
 .message {
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid $silver
+  border-bottom: 1px solid $silver;
 }
 
 .sender {
