@@ -208,8 +208,12 @@ button:disabled {
   margin-right: 10px;
 }
 
-.sender {
+.me {
   color: $peter-river;
+}
+
+.other {
+  color: $emerald;
 }
 
 @media screen and (max-width: 420px) {
