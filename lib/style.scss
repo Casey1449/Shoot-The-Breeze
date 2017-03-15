@@ -169,6 +169,7 @@ button:disabled {
   color: white;
   font-size: 20px;
   margin-right: 10px;
+  width: 50px;
 }
 
 .time-stamp {
@@ -180,7 +181,9 @@ button:disabled {
 }
 
 .message {
-  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $silver
 }
 
 .sender {
